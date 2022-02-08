@@ -1,11 +1,12 @@
 import { useState } from "react";
-const Contact = () => {
-    const [name] = useState("")
+const Contact = ({myName,myCountry}) => {
+    const [name] = useState("");
 
     return (
-        <div>
-            {name ? name : 'Please define your name'}
+        <div style={{backgroundColor: "red", fontSize: "30px",color: "white"}}>
+           <h1>{myName}</h1>
+           <h1>{myCountry}</h1>
         </div>
-    )
-}
+    );
+};
 export default Contact;
