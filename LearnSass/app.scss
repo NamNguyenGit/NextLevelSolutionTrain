@@ -1,6 +1,4 @@
-$color: red;
-$fontSize: 18px;
-body {
-    font-size: $fontSize;
-    color: $color;
-}
+@use "header";
+@use "articles";
+@use "footer";
+@use "nav";
