@@ -1,11 +1,20 @@
-import { useContext } from "react";
+import { useContext,  useState } from "react";
 import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 
 const Register = (props) => {
   const { dispatch } = useContext(ModelContext);
+  const [state, setState] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const registerForm = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
   return (
-    <form>
+    <form onSubmit={registerForm}>
       <div className="model__heading">
         <h3>Create new account</h3>
       </div>
@@ -15,6 +24,13 @@ const Register = (props) => {
           placeholder="Enter name"
           name=""
           className="group__control"
+          onChange={(e) =>
+            setState({
+              ...state,
+              name: e.target.value,
+            })
+          }
+          value={state.name}
         />
       </div>
       <div className="group">
@@ -23,6 +39,13 @@ const Register = (props) => {
           placeholder="Enter email"
           name=""
           className="group__control"
+          onChange={(e) =>
+            setState({
+              ...state,
+              email: e.target.value,
+            })
+          }
+          value={state.email}
         />
       </div>
       <div className="group">
@@ -31,6 +54,13 @@ const Register = (props) => {
           placeholder="Create password"
           name=""
           className="group__control"
+          onChange={(e) =>
+            setState({
+              ...state,
+              password: e.target.value,
+            })
+          }
+          value={state.password}
         />
       </div>
       <div className="group flex space-between y-center">
