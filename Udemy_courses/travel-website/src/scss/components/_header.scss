@@ -5,6 +5,15 @@
     height: 100vh;
     position: relative;
     clip-path: polygon(50% 0%, 100% 0, 100% 90%, 0 100%, 0 100%, 0% 60%, 0 0);
+    &__logo {
+        @include mixins.position(absolute, 3rem, 0, null, null, null, null);
+        z-index: 1;
+        img {
+            width: 15rem;
+            height: auto;
+            object-fit: cover;
+        }
+    }
     &__video {
         @include mixins.position(absolute, 0, 0, null, null, 100%, 100%);
         overflow: hidden;
@@ -32,9 +41,11 @@
                     margin-top: .8rem;
                     color: variables.$white;
                     font-size: 1.5rem;
+                    @include mixins.animation(subHeading, 1s, ease-out, -10rem, 0)
                 }
                 &__link{
                     margin-top: .8rem;
+                    @include mixins.animation(headerButtom, 1s, ease-out, 8rem, 0)
                 }
             }
         }
