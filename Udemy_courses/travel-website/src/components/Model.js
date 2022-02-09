@@ -1,6 +1,15 @@
+import { useContext } from "react";
+import ModelContext from "../context/ModelContext";
+import { CLOSE_MODEL } from "../context/types/ModelTypes";
 const Model = () => {
-  return (
-    <div className="model">
+  const { state, dispatch } = useContext(ModelContext);
+  const close = (e) => {
+    if (e.target.getAttribute("class") === "model") {
+      dispatch({ type: CLOSE_MODEL });
+    }
+  };
+  return state.modelStatus ? (
+    <div className="model" onClick={close}>
       <div className="model__body">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam modi
         obcaecati nostrum incidunt reprehenderit deleniti eaque, porro optio
@@ -8,6 +17,8 @@ const Model = () => {
         cumque et.
       </div>
     </div>
+  ) : (
+    ""
   );
 };
 export default Model;
