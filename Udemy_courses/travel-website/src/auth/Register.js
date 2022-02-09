@@ -28,8 +28,9 @@ const Register = () => {
           className="group__control"
         />
       </div>
-      <div className="group">
+      <div className="group flex space-between y-center">
         <input type="submit" value="Register" name="" className="btn-dark" />
+        <span>Already have an account?</span>
       </div>
     </form>
   );
