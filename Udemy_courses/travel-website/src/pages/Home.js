@@ -4,9 +4,9 @@ import Header from "../components/Header";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
+import Register from "../auth/Register";
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
-
   const [state] = useState({
     heading: " We are travel friends",
     paragraph:
@@ -22,7 +22,9 @@ const Home = () => {
           Get Started
         </button>
       </Header>
-      <Model />
+      <Model>
+        <Register />
+      </Model>
     </div>
   );
 };
