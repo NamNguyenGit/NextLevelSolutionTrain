@@ -15,12 +15,12 @@
     height: $height;
 }
 
-@mixin button($color1,$color2,$textColor,$height,$fontSize,$bdr,$paddingVertical,$paddingHorizontal) {
-    background: linear-gradient(to right , $color1, $color2);
+@mixin button($color1, $color2, $textColor, $height, $fontSize, $bdr, $paddingVertical, $paddingHorizontal) {
+    background: linear-gradient(to right, $color1, $color2);
     color: $textColor;
     text-decoration: none;
     height: $height;
-    line-height:$height;
+    line-height: $height;
     display: inline-block;
     font-size: $fontSize;
     font-weight: 400;
@@ -30,4 +30,18 @@
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+@mixin animation($name, $duration, $timeFunction, $tranlate1, $tranlate2) {
+    animation: $name $duration $timeFunction;
+    @keyframes #{$name} {
+        0% {
+            opacity: 0;
+            transform: translateY($tranlate1);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY($tranlate2);
+        }
+    }
 }
