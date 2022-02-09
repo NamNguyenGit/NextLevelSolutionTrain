@@ -8,7 +8,7 @@ const Model = (props) => {
       dispatch({ type: CLOSE_MODEL });
     }
   };
-  return state.modelStatus ? (
+  return state.modelStatus && state.current === props.current ? (
     <div className="model" onClick={close}>
       <div className="model__body">{props.children}</div>
     </div>

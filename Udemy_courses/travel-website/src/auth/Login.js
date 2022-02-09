@@ -2,21 +2,15 @@ import { useContext } from "react";
 import ModelContext from "../context/ModelContext";
 import { OPEN_MODEL } from "../context/types/ModelTypes";
 
-const Register = (props) => {
-  const { dispatch } = useContext(ModelContext);
+
+const Login = (props) => {
+  const {dispatch} = useContext(ModelContext);
   return (
     <form>
       <div className="model__heading">
-        <h3>Create new account</h3>
+        <h3>Login</h3>
       </div>
-      <div className="group">
-        <input
-          type="text"
-          placeholder="Enter name"
-          name=""
-          className="group__control"
-        />
-      </div>
+
       <div className="group">
         <input
           type="email"
@@ -28,22 +22,16 @@ const Register = (props) => {
       <div className="group">
         <input
           type="password"
-          placeholder="Create password"
+          placeholder="Enter password"
           name=""
           className="group__control"
         />
       </div>
       <div className="group flex space-between y-center">
-        <input type="submit" value="Register" name="" className="btn-dark" />
-        <span
-          onClick={() =>
-            dispatch({ type: OPEN_MODEL, payload: props.currentModel })
-          }
-        >
-          Already have an account?
-        </span>
+        <input type="submit" value="Login" name="" className="btn-dark" />
+        <span onClick={() => dispatch({type: OPEN_MODEL, payload: props.currentModel})}>Create new account?</span>
       </div>
     </form>
   );
 };
-export default Register;
+export default Login;
