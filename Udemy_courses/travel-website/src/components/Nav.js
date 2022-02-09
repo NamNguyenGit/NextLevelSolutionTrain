@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
-
+import { useContext } from "react";
+import NavContext from "../context/NavContext";
 const Nav = () => {
+    const {state , dispatch} = useContext(NavContext);
+    console.log('nav state: ', state)
   return (
-    <div className="navLayer">
-      <div className="nav">
+      <>
+      {state ? <div className="navLayer"></div> : '' }
+     
+      <div className={state ? 'nav nav--open' : 'nav nav--close'}>
         <div className="nav__content">
           <li>
             <Link to="/">Home</Link>
@@ -13,7 +18,9 @@ const Nav = () => {
           </li>
         </div>
       </div>
-    </div>
+    
+      </>
+    
   );
 };
 export default Nav;
