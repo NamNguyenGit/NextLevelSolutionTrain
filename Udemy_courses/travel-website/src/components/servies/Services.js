@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ServicesLeft from "./ServicesLeft";
-
+import SharedContext from "../../context/SharedContext";
+import ServicesList from "./ServicesList";
 const Services = () => {
+  const { sharedData : {servicesData} } = useContext(SharedContext);
+  
   const [state] = useState({
     heading:
       "Why customers love travel friends? because we provide unique services. ",
@@ -20,10 +23,7 @@ const Services = () => {
               />
             </div>
             <div className="col-6 p-15">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Dignissimos accusantium ea natus vel ut alias optio maxime
-              quibusdam, doloribus distinctio voluptatibus facere dolorem est
-              adipisci. Eos autem dolor obcaecati architecto.
+                <ServicesList services={servicesData} />
             </div>
           </div>
         </div>
