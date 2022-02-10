@@ -23,7 +23,7 @@ const Destinations = () => {
           </div>
         </div>
         <div className="destinations__block">
-          <div className="row">
+          <div className="row ml-minus-15  mr-minus-15">
             {destinations.map((destination) => (
               <DestinationsList destination={destination} key={destination.id}  />
             ))}
