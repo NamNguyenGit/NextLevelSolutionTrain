@@ -1,7 +1,10 @@
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import DestinationsContext from "../context/DestinationsContext";
+import DestinationsList from "./DestinationsList";
 
 const Destinations = () => {
+  const { destinationsData: {destinations} } = useContext(DestinationsContext);
+ 
   const [state] = useState({
     heading:
       "Discover the most engaging places in the world with Travel Friends",
@@ -17,6 +20,13 @@ const Destinations = () => {
           </div>
           <div className="col-6 p-15">
             <p className="destinations__paragraph">{state.paragraph}</p>
+          </div>
+        </div>
+        <div className="destinations__block">
+          <div className="row">
+            {destinations.map((destination) => (
+              <DestinationsList destination={destination} key={destination.id}  />
+            ))}
           </div>
         </div>
       </div>
