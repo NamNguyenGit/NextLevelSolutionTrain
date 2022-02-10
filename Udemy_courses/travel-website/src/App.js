@@ -6,6 +6,7 @@ import ModelProvider from "./context/providers/ModelProvider";
 import Nav from "./components/Nav";
 import NavProvider from "./context/providers/NavProvider";
 import Toggle from "./components/Toggle";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
@@ -14,11 +15,13 @@ function App() {
         <NavProvider>
           <Toggle />
           <Nav />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route component={NotFound} />
-          </Switch>
+          <HelmetProvider>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" exact component={About} />
+              <Route component={NotFound} />
+            </Switch>
+          </HelmetProvider>
         </NavProvider>
       </ModelProvider>
     </Router>
