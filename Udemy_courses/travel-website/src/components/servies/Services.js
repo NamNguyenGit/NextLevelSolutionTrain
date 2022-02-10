@@ -1,20 +1,29 @@
+import { useState } from "react";
+import ServicesLeft from "./ServicesLeft";
+
 const Services = () => {
+  const [state] = useState({
+    heading:
+      "Why customers love travel friends? because we provide unique services. ",
+    subHeading:
+      "Our aim is to provide professional and unique services to customers, and we have provided high quality services to our customers thats why they love travel friends.",
+  });
   return (
     <div className="services">
       <div className="services__contents">
         <div className="container">
           <div className="row mr-minus-15 ml-minus-15">
             <div className="col-6 p-15">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Assumenda, consequatur atque aut dolorum nostrum ad commodi dolore
-              porro distinctio earum saepe. Esse beatae assumenda laudantium
-              iusto ipsum ducimus, mollitia quisquam?
+              <ServicesLeft
+                heading={state.heading}
+                subHeading={state.subHeading}
+              />
             </div>
             <div className="col-6 p-15">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Assumenda, consequatur atque aut dolorum nostrum ad commodi dolore
-              porro distinctio earum saepe. Esse beatae assumenda laudantium
-              iusto ipsum ducimus, mollitia quisquam?
+              Dignissimos accusantium ea natus vel ut alias optio maxime
+              quibusdam, doloribus distinctio voluptatibus facere dolorem est
+              adipisci. Eos autem dolor obcaecati architecto.
             </div>
           </div>
         </div>
