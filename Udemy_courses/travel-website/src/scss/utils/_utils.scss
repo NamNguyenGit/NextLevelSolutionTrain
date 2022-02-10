@@ -39,7 +39,7 @@
 }
 
 .space-between {
-   justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .y-center {
@@ -56,4 +56,15 @@
 
 .ml-minus-15 {
     margin-left: -1.5rem;
+}
+
+.heading {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    background: linear-gradient(to right, $main1, $main2);
+    background-clip: text;
+    color: transparent;
+    transform: rotate(-2deg);
+    text-transform: capitalize;
 }
