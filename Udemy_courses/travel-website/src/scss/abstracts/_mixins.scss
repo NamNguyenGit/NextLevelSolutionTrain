@@ -46,11 +46,20 @@
     }
 }
 
-@mixin toggleSpans($bg,$width,$height,$mt) {
+@mixin toggleSpans($bg, $width, $height, $mt) {
     display: block;
-    background:  $bg;
+    background: $bg;
     width: $width;
-    height:$height;
+    height: $height;
     margin-top: $mt;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
+}
+
+@mixin status($bg,$color) {
+    padding: 0.6rem 1.3rem;
+    background: $bg;
+    color:$color;
+    border-radius: 0.6rem;
+    font-size: 1.3rem;
+    text-transform: capitalize;
 }
