@@ -1,2 +1,2 @@
-This is place where i intership at Next Level Company
+This is place where i internship  at Next Level Company
 
