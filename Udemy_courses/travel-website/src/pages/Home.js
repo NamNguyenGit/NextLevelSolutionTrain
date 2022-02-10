@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Header from "../components/Header";
 import Model from "../components/Model";
 import ModelContext from "../context/ModelContext";
@@ -18,6 +17,8 @@ const Home = () => {
 
   const [registerModel] = useState("registerModel");
   const [loginModel] = useState("loginModel");
+
+  
 
   return (
     <div>

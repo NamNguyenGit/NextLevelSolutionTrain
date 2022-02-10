@@ -14,6 +14,7 @@ const Details = () => {
   useEffect(() => {
     dispatch({ type: DETAILS, payload: id });
     dispatch({ type: CITIES, payload: id });
+    window.scrollTo(0,0);
   }, [id]);
 
   return (
