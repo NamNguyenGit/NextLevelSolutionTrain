@@ -1,5 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsStopwatch } from "react-icons/bs";
+import Facilities from "./Facilities";
 const Cities = ({ cities, name }) => {
   const formate = (price) => {
     return `${price}.00`;
@@ -48,6 +49,8 @@ const Cities = ({ cities, name }) => {
                           </span>
                           {formate(city.price)}
                         </div>
+                        <Facilities name="room" value={city.room} />
+                        <Facilities name="food" value={city.food} />
                       </div>
                     </div>
                   </div>

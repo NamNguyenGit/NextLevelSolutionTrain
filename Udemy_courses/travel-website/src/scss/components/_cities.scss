@@ -47,7 +47,7 @@
             &__top {
                 @include align(flex, space-between, center, null);
                 &__name {
-                    font-size: 1.5rem;
+                    font-size: 1.6rem;
                 }
                 &__duration {
                     @include align(flex, null, center, null);
@@ -62,8 +62,16 @@
                     font-size: 1.6rem;
                 }
                 margin-top: .5rem;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 font-weight: 700;
+            }
+            &__facilities {
+                @include align(flex, space-between, center, null);
+                margin-top: .5rem;
+                &__name {
+                    font-size: 1.7rem;
+                    text-transform: capitalize;
+                }
             }
         }
     }
