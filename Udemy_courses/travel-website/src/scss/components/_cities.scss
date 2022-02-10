@@ -57,6 +57,14 @@
                     }
                 }
             }
+            &__price {
+                &__dollor {
+                    font-size: 1.6rem;
+                }
+                margin-top: .5rem;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
         }
     }
 }
