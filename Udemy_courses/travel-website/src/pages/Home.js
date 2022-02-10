@@ -7,6 +7,7 @@ import Register from "../auth/Register";
 import Login from "../auth/Login";
 import { Helmet } from "react-helmet-async";
 import Destinations from "../components/Destinations";
+import Services from "../components/servies/Services";
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
   const [state] = useState({
@@ -45,6 +46,7 @@ const Home = () => {
         <Login currentModel={registerModel} />
       </Model>
       <Destinations />
+      <Services />
     </div>
   );
 };
