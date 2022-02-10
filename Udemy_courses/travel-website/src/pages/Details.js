@@ -8,16 +8,13 @@ import DestinationInfo from "../components/DestinationInfo";
 import Cities from "../components/Cities";
 const Details = () => {
   const { destinationsData, dispatch } = useContext(DestinationsContext);
-  console.log(destinationsData.details);
-  const { details } = destinationsData;
+  const { details, filteredCities } = destinationsData;
   const { id } = useParams();
 
   useEffect(() => {
     dispatch({ type: DETAILS, payload: id });
     dispatch({ type: CITIES, payload: id });
   }, [id]);
-
-  console.log(destinationsData.filteredCities);
 
   return (
     <>
@@ -26,7 +23,7 @@ const Details = () => {
       </Helmet>
       <Header heading={details.name} image={details.bigImage}></Header>
       <DestinationInfo details={details} />
-      <Cities />
+      <Cities cities={filteredCities} name={details.name} />
     </>
   );
 };
