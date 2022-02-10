@@ -61,17 +61,20 @@
                 &__dollor {
                     font-size: 1.6rem;
                 }
-                margin-top: .5rem;
+                margin-top: 0.5rem;
                 font-size: 2rem;
                 font-weight: 700;
             }
             &__facilities {
                 @include align(flex, space-between, center, null);
-                margin-top: .5rem;
+                margin-top: 0.5rem;
                 &__name {
                     font-size: 1.7rem;
                     text-transform: capitalize;
                 }
+            }
+            &__button {
+                margin-top: 1rem;
             }
         }
     }
