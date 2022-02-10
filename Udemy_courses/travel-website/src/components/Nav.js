@@ -3,7 +3,7 @@ import { useContext } from "react";
 import NavContext from "../context/NavContext";
 const Nav = () => {
     const {state , dispatch} = useContext(NavContext);
-    console.log('nav state: ', state)
+    
   return (
       <>
       {state ? <div className="navLayer"></div> : '' }
