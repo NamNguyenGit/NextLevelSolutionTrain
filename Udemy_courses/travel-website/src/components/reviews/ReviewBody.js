@@ -10,7 +10,7 @@ const ReviewBody = ({ review }) => {
             <LazyLoadImage src={review.image} alt={review.image} />
           </div>
           <div className="reviews__body__contents__info">
-            <div className="reviews__body__contents__info_name">
+            <div className="reviews__body__contents__info__name">
               {review.name}
             </div>
             <div className="reviews__body__contents__info__rating">
