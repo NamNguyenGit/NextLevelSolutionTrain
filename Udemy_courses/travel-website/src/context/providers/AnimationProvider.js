@@ -6,7 +6,7 @@ const AnimationProvider = ({ children }) => {
 
     elements.forEach((element) => {
       const elementPosition = element.getBoundingClientRect().top;
-      const viewPortHeight = window.innerHeight - 100;
+      const viewPortHeight = window.innerHeight - 150;
       if(elementPosition < viewPortHeight) {
           element.classList.add('animate');
       }else {
