@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import PageContainer from "../components/PageContainer";
+import PageContainer from "../components/pages-parts/PageContainer";
+import AboutImage from "../components/pages-parts/AboutImage";
 const About = () => {
   const [state] = useState({
     heading: "about us",
@@ -15,7 +16,9 @@ const About = () => {
         <title>About page</title>
         <meta name="description" content="travel friends about  page "></meta>
       </Helmet>
-      <PageContainer  data={state} />
+      <PageContainer data={state}>
+        <AboutImage />
+      </PageContainer>
     </>
   );
 };
