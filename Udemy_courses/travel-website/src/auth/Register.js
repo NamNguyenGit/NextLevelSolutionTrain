@@ -63,7 +63,7 @@ const Register = (props) => {
           value={state.password}
         />
       </div>
-      <div className="group flex space-between y-center">
+      <div className="group model__row">
         <input type="submit" value="Register" name="" className="btn-dark" />
         <span
           onClick={() =>

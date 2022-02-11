@@ -47,7 +47,7 @@ const Login = (props) => {
           value={state.password}
         />
       </div>
-      <div className="group flex space-between y-center">
+      <div className="group model__row">
         <input type="submit" value="Login" name="" className="btn-dark" />
         <span onClick={() => dispatch({type: OPEN_MODEL, payload: props.currentModel})}>Create new account?</span>
       </div>

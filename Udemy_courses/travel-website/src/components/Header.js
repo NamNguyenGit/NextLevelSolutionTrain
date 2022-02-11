@@ -23,7 +23,7 @@ const Header = ({ heading, paragraph, children, image }) => {
           <LazyLoadImage src={image} alt={image} />
         ) : (
           <video
-            className="header__video__detail"
+            className="header__video"
             src={state.video}
             autoPlay
             loop
