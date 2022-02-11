@@ -15,7 +15,7 @@ const Services = () => {
     <div className="services">
       <div className="services__contents">
         <div className="container">
-          <div className="row mr-minus-15 ml-minus-15">
+          <div className="row mr-minus-15 ml-minus-15 services__contents__container">
             <div className="col-6 p-15">
               <ServicesLeft
                 heading={state.heading}
