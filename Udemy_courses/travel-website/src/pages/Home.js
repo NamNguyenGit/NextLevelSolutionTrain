@@ -10,6 +10,7 @@ import Destinations from "../components/Destinations";
 import Services from "../components/servies/Services";
 import Reviews from "../components/reviews/Reviews";
 import Gallery from "../components/gallery/Gallery";
+import Footer from "../components/footer/Footer"
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
   const [state] = useState({
@@ -51,6 +52,7 @@ const Home = () => {
       <Services />
       <Reviews />
       <Gallery />
+      <Footer />
       
     </div>
   );
