@@ -6,7 +6,8 @@ import gallery from "../../data/gallery";
 const GalleryProvider = (props) => {
     const [ galleryStore , dispatch] = useReducer(GalleryReducer, {
         gallery,
-        lightboxStatus: true,
+        lightboxStatus: false,
+        currentLightBox : {},
     });
    
     return (

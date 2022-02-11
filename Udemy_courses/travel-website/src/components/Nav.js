@@ -6,7 +6,7 @@ const Nav = () => {
     
   return (
       <>
-      {state ? <div className="navLayer"></div> : '' }
+      {state ? <div className="navLayer" ></div> : '' }
      
       <div className={state ? 'nav nav--open' : 'nav nav--close'}>
         <div className="nav__content">
