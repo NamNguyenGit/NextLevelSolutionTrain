@@ -5,10 +5,11 @@ import gallery from "../../data/gallery";
 
 const GalleryProvider = (props) => {
     const [ galleryStore , dispatch] = useReducer(GalleryReducer, {
-        gallery: gallery
+        gallery
     });
+   
     return (
-        <GalleryContext.Provider value={galleryStore, dispatch}>
+        <GalleryContext.Provider value={{ galleryStore, dispatch}}>
             {props.children}
         </GalleryContext.Provider>
     )

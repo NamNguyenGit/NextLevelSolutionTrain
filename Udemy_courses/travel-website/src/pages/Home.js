@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 import Destinations from "../components/Destinations";
 import Services from "../components/servies/Services";
 import Reviews from "../components/reviews/Reviews";
-
+import Gallery from "../components/gallery/Gallery";
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
   const [state] = useState({
@@ -50,7 +50,7 @@ const Home = () => {
       <Destinations />
       <Services />
       <Reviews />
-      
+      <Gallery />
       
     </div>
   );
