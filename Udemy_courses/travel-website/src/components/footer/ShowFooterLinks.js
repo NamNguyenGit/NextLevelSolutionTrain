@@ -6,7 +6,7 @@ const ShowFooterLinks = ({ links, external }) => {
       <li className="footer__ul__li">
         {external ? (
           <>
-            <BsChevronRight size={12} />
+            <BsChevronRight  size={12} />
             <a href={link.route} target="__blank">
               {link.name}
             </a>
