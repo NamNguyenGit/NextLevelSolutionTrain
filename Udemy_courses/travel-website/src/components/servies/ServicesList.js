@@ -2,7 +2,7 @@ import {BiChevronRight} from "react-icons/bi"
 const ServicesList = ({services}) => {
     return services.length > 0 ? services.map((service,index) => (
         <div className="services__list" key={index}>
-            <h4 className="services__list_heading">
+            <h4 className="services__list__heading">
                 <BiChevronRight size={20}/>
                 {service.heading}
             </h4>
