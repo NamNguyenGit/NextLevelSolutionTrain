@@ -1,7 +1,29 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { BsStarFill, BsStar } from "react-icons/bs";
 const ReviewBody = ({ review }) => {
-  console.log(review.name)
+  const rating = (number) => {
+    let container = [];
+    for (let i = 1; i <= 5; i++) {
+      if (i <= number) {
+        container.push(
+          <BsStarFill
+            size={13}
+            color="df2189"
+            className="reviews__body__contents__info__rating__icon"
+          />
+        );
+      } else {
+        container.push(
+          <BsStar
+            size={13}
+            color="df2189"
+            className="reviews__body__contents__info__rating__icon"
+          />
+        );
+      }
+    }
+    return container;
+  };
   return (
     <div className="col-4 p-15">
       <div className="reviews__body">
@@ -14,7 +36,7 @@ const ReviewBody = ({ review }) => {
               {review.name}
             </div>
             <div className="reviews__body__contents__info__rating">
-              {review.stars}
+              {rating(review.stars)}
             </div>
             <div className="reviews__body__contents__info__comment">
               {review.comment}

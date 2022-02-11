@@ -33,7 +33,7 @@ const reviews = [
 		id: 5,
 		name: 'rahul gandi',
 		comment:
-			'I and my wife both are big fans of the travel friends website because they have everything that you want, 5-star rooms, friendly tour guides, cheap packages, and special discounts for couples, my final words must do one tour with travel friends after you also love travel friends.',
+			'Me and my wife both are big fans of the travel friends website because they have everything that you want, 5-star rooms, friendly tour guides, cheap packages, and special discounts for couples, my final words must do one tour with travel friends after you also love travel friends.',
 		stars: 5,
 		image: '/assets/reviewUsers/user6.jpg',
 	},
