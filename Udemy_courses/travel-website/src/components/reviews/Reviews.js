@@ -10,7 +10,7 @@ const Reviews = () => {
   return (
     <div className="reviews">
       <div className="container">
-        <div className="heading">{heading}</div>
+        <div className="heading animation">{heading}</div>
         <div className="row mr-minus-15 ml-minus-15">
           {reviewData.length > 0
             ? reviewData.map((review, index) => (
