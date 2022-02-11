@@ -10,7 +10,7 @@
 }
 
 .group {
-    margin-bottom: 1.3rem ;
+    margin-bottom: 1.3rem;
     span {
         font-size: 1.5rem;
         display: inline-block;
@@ -19,7 +19,6 @@
     }
     &__control {
         @include control(5rem, 0, 1.5rem, $silverlight-45);
-       
     }
     &__textarea {
         @include control(10rem, 1.5rem, 1.5rem, $silverlight-45);
@@ -74,7 +73,13 @@
     text-transform: capitalize;
 }
 
-.animate {
-    color: red !important;
+.animation {
+    transform: translateY(-10rem);
+    opacity: 0;
+    transition: all 1s linear;
+}
 
+.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
