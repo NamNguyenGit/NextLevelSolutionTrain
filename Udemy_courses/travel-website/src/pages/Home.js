@@ -8,8 +8,8 @@ import Login from "../auth/Login";
 import { Helmet } from "react-helmet-async";
 import Destinations from "../components/Destinations";
 import Services from "../components/servies/Services";
-
 import Reviews from "../components/reviews/Reviews";
+
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
   const [state] = useState({
@@ -50,6 +50,7 @@ const Home = () => {
       <Destinations />
       <Services />
       <Reviews />
+      
     </div>
   );
 };
