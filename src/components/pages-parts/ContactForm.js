@@ -7,7 +7,7 @@ const ContactForm = () => {
   });
   const submitContact = (e) => {
     e.preventDefault();
-    console.log(state);
+    
   };
   return (
     <form onSubmit={submitContact}>
